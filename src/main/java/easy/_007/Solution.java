@@ -18,6 +18,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
+        solution.notify();
         System.out.println(solution.reverse(123));
         System.out.println(solution.reverse(-123));
         System.out.println(solution.reverse(100));
