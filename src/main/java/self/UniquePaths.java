@@ -1,7 +1,5 @@
 package self;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Stack;
 
 public class UniquePaths {
@@ -13,49 +11,52 @@ public class UniquePaths {
     }
 
     public int uniquePaths(int m, int n) {
+        int[][] dp = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 || j == 0)
+                    dp[i][j] = 1;
+                else {
+                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+                }
+            }
+        }
+        return dp[m - 1][n - 1];
+    }
+
+
+    public int first_commit_record(int m, int n) {
         if (m == 1 || n == 1) {
             return 1;
         }
         int path = 0;
         Stack<node> stack = new Stack<>();
         stack.add(new node(0, 0));
-        int[][] count = new int[n][m];
-        Queue<node> queue
-                =new LinkedList();
-        queue.add(new node(0, 0));
-
-        while (queue.size() > 0) {
-
-            node pop = queue.poll();
-
-            if ((pop.row == m - 2 && pop.col - 1 == n) || (pop.row == m - 1 && pop.col - 2 == n)) {
+        while (stack.size() > 0) {
+            node pop = stack.pop();
+            if (pop.down == n - 1 && pop.right == m - 1) {
                 path++;
+                continue;
             }
-
-            if (pop.row + 1 < n) {
-                queue.add(new node(pop.col, pop.row + 1));
-
-
+            if (pop.right + 1 < m) {
+                stack.push(new node(pop.right + 1, pop.down));
             }
-
-            if (pop.col + 1 < m) {
-                queue.add(new node(pop.col + 1, pop.row));
-
+            if (pop.down + 1 < n) {
+                stack.push(new node(pop.right, pop.down + 1));
             }
-
 
         }
         return path;
     }
 
+
     class node {
-        private int col; //列
-        private int row;  //行
+        private int right; //列
+        private int down;  //行
 
-
-        public node(int col, int down) {
-            this.col = col;
-            this.row = down;
+        public node(int right, int down) {
+            this.right = right;
+            this.down = down;
         }
     }
 }
