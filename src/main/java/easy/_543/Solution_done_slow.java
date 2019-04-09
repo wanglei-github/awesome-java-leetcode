@@ -11,13 +11,13 @@ import structure.TreeNode;
  *     desc  :
  * </pre>
  */
-public class Solution {
+public class Solution_done_slow {
 
     int max = 0;
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.di(TreeNode.createTestData("[4,-7,-3,null,null,-9,-3,9,-7,-4,null,6,null,-6,-6,null,null,2,6,5,null,9,null,null,-1,-4,null,null,null,-2]")));
+        Solution_done_slow solutionDoneslow = new Solution_done_slow();
+        System.out.println(solutionDoneslow.di(TreeNode.createTestData("[4,-7,-3,null,null,-9,-3,9,-7,-4,null,6,null,-6,-6,null,null,2,6,5,null,9,null,null,-1,-4,null,null,null,-2]")));
     }
 
     public int diameterOfBinaryTree3(TreeNode root) {
