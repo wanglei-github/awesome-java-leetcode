@@ -9,9 +9,9 @@ package easy._121;
  *     desc  :
  * </pre>
  */
-public class Solution {
+public class Solution_done {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution_done solution = new Solution_done();
         System.out.println(solution.maxProfit2(new int[]{2, 1, 4}));
         System.out.println(solution.maxProfit2(new int[]{7, 1, 5, 3, 6, 4}));
         System.out.println(solution.maxProfit2(new int[]{7, 6, 4, 3, 1}));
