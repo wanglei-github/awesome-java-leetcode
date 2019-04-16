@@ -24,9 +24,9 @@ public class Solution {
         }
 
 
-//        System.out.println(new Solution().threeSum(new int[]{-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6}));
-//        System.out.println(new Solution().search(new int[]{1}, 0));
-//        System.out.println(new Solution().findCircleNum(new int[][]{
+//        System.out.println(new Solution_done().threeSum(new int[]{-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6}));
+//        System.out.println(new Solution_done().search(new int[]{1}, 0));
+//        System.out.println(new Solution_done().findCircleNum(new int[][]{
 //
 //                {1, 0, 0, 1}, {0, 1, 1, 0}, {0, 1, 1, 1}, {1, 0, 1, 1}
 //

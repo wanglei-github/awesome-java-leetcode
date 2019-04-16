@@ -1,9 +1,9 @@
 package easy._746;
 
-public class Solution {
+public class Solution_done {
     public static void main(String[] args) {
         int[] ints = {12, 100000, 3000,2,10000,20000};
-        System.out.println(new Solution().minCostClimbingStairs(ints));
+        System.out.println(new Solution_done().minCostClimbingStairs(ints));
     }
 
     public int minCostClimbingStairs(int[] cost) {
